@@ -50,6 +50,118 @@ const DIRECTORY_DATA = [
         linkUrl: 'Clothing/CasualOutfit.gltf',
         iosUrl: 'Clothing/CasualOutfit.usdz',
     },
+    {
+        id: 4,
+        title: 'Swimsuit A',
+        imageUrl: 'swimsuitA',
+        size: 'large-text',
+        linkUrl: 'Swimsuits/Swimsuit_A.gltf',
+        iosUrl: 'Swimsuits/Swimsuit_A.usdz',
+    },
+    {
+        id: 5,
+        title: 'Swimsuit B',
+        imageUrl: 'swimsuitB',
+        size: 'large-text',
+        linkUrl: 'Swimsuits/Swimsuit_B.gltf',
+        iosUrl: 'Swimsuits/Swimsuit_B.usdz',
+    },
+    {
+        id: 6,
+        title: 'Swimsuit C',
+        imageUrl: 'swimsuitC',
+        size: 'large-text',
+        linkUrl: 'Swimsuits/Swimsuit_C.gltf',
+        iosUrl: 'Swimsuits/Swimsuit_C.usdz',
+    },
+    {
+        id: 7,
+        title: 'Swimsuit D',
+        imageUrl: 'swimsuitD',
+        size: 'large-text',
+        linkUrl: 'Swimsuits/Swimsuit_D.gltf',
+        iosUrl: 'Swimsuits/Swimsuit_D.usdz',
+    },
+    {
+        id: 8,
+        title: 'Swimsuit E',
+        imageUrl: 'swimsuitE',
+        size: 'large-text',
+        linkUrl: 'Swimsuits/Swimsuit_E.gltf',
+        iosUrl: 'Swimsuits/Swimsuit_E.usdz',
+    },
+    {
+        id: 9,
+        title: 'Swimsuit F',
+        imageUrl: 'swimsuitF',
+        size: 'large-text',
+        linkUrl: 'Swimsuits/Swimsuit_F.gltf',
+        iosUrl: 'Swimsuits/Swimsuit_F.usdz',
+    },
+    {
+        id: 10,
+        title: 'Burger',
+        imageUrl: 'burger',
+        linkUrl: 'Misc/Burger/burger.glb',
+        iosUrl: 'Misc/Burger/burger.usdz',
+    },
+    {
+        id: 11,
+        title: 'Cake',
+        imageUrl: 'cake',
+        linkUrl: 'Misc/Cake/Cake.glb',
+        iosUrl: 'Misc/Cake/Cake.usdz',
+    },
+    {
+        id: 12,
+        title: 'Milkbone',
+        imageUrl: 'milkbone',
+        linkUrl: 'Smuckers/Milkbone.gltf',
+        iosUrl: 'Smuckers/Milkbone.usdz',
+    },
+    {
+        id: 13,
+        title: 'Uncrustables',
+        imageUrl: 'uncrustables',
+        size: 'one-word extra-large-text',
+        linkUrl: 'Smuckers/Uncrustables.gltf',
+        iosUrl: 'Smuckers/Uncrustables.usdz',
+    },
+    {
+        id: 14,
+        title: 'Strawberry Jam',
+        imageUrl: 'strawberry',
+        size: 'extra-extra-large-text',
+        linkUrl: 'Smuckers/Jam.gltf',
+        iosUrl: 'Smuckers/Jam.usdz',
+    },
+    {
+        id: 15,
+        title: 'Pipe',
+        imageUrl: 'pipe',
+        linkUrl: 'Pipe/USPipe_CrossSection.gltf',
+        iosUrl: 'Pipe/USPipe_CrossSection.usdz',
+    },
+    {
+        id: 16,
+        title: 'Pipe Ensamble',
+        imageUrl: 'pipeemsemble',
+        size: 'extra-extra-large-text',
+        linkUrl: 'Pipe/USPipe_Ensamble.gltf',
+    },
+    {
+        id: 17,
+        title: 'Pipe Full',
+        imageUrl: 'pipefull',
+        linkUrl: 'Pipe/USPipe_Full.gltf',
+    },
+    {
+        id: 18,
+        title: 'Nike Anim',
+        imageUrl: 'nikeanim',
+        linkUrl: 'NikeShoes/Nike_Low_AnimTest_1.gltf',
+        iosUrl: 'NikeShoes/Nike_Low_AnimTest_1.usdz',
+    },
 ];
 
 const bodyContainer = document.getElementById('body-container');
@@ -64,7 +176,8 @@ const changeIt = (number) => {
 
     defaultModel.setAttribute('class', 'show');
 
-    const poster = `./assets/Imgs/Posters/${imageUrl}_poster.png`;
+    //const poster = `./assets/Imgs/Posters/${imageUrl}_poster.png`;
+    const poster = `./assets/Imgs/loader.gif`;
     const src = `./assets/Models/${linkUrl}`;
     let ios_src = '';
     if (iosUrl) {
@@ -77,7 +190,7 @@ const changeIt = (number) => {
     }
     const alt_comment = `./assets/Models/${title}`;
 
-    console.log(iosUrl);
+    //console.log(iosUrl);
 
     const currentModel = document.getElementById('currentModel');
     const buttonContainer = document.getElementById('button-container');
@@ -91,7 +204,9 @@ const changeIt = (number) => {
     const modelViewer = document.createElement('model-viewer');
     modelViewer.setAttribute('class', 'model');
     modelViewer.setAttribute('id', 'currentModel');
+    modelViewer.setAttribute('preload', '');
     modelViewer.setAttribute('poster', poster);
+    modelViewer.setAttribute('style', '--poster-color: #1f1f1f !important');
     modelViewer.setAttribute('src', src);
     modelViewer.setAttribute('ios-src', ios_src);
     modelViewer.setAttribute('alt', alt_comment);

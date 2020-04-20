@@ -101,9 +101,6 @@
 .menu-item:first-child {
     margin-right: 7.5px;
 }
-.menu-item:last-child {
-    margin-left: 7.5px;
-}
 .menu-item .background-image {
     height: 100%;
     width: 100%;
