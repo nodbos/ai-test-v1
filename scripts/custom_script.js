@@ -140,7 +140,7 @@ const createButtons = (number, buttonContainerBase) => {
     // . Creating Button Base Div
 
     const buttonBase = document.createElement('div');
-    const poster = `../assets/Imgs/Posters/${DIRECTORY_DATA[number].imageUrl}_poster.png`;
+    const poster = `./assets/Imgs/Posters/${DIRECTORY_DATA[number].imageUrl}_poster.png`;
     let firstChild = '';
 
     if (number === 0) {
