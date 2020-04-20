@@ -240,13 +240,13 @@ const createButtons = (number, buttonContainerBase) => {
 
     let colorClass = '';
 
-    if (productType === 'clothing' || productType === 'nikeshoes') {
+    if (productType === 'Clothing' || productType === 'NikeShoes') {
         colorClass = 'aqua';
-    } else if (productType === 'swimsuits') {
+    } else if (productType === 'Swimsuits') {
         colorClass = 'blue';
-    } else if (productType === 'misc' || productType === 'smuckers') {
+    } else if (productType === 'Misc' || productType === 'Smuckers') {
         colorClass = 'green';
-    } else if (productType === 'pipe') {
+    } else if (productType === 'Pipe') {
         colorClass = 'red';
     } else {
         colorClass = 'aqua';
