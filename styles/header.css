@@ -1,0 +1,50 @@
+@media screen and (max-width: 750px) {
+    .header .logo-container {
+        width: 168px !important;
+        height: 51px !important;
+        margin: 25px 0 0 5px !important;
+    }
+    .header #options #option {
+        font-size: 1em !important;
+    }
+}
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.header .logo-container {
+    margin: 5px 0 0 5px;
+    width: 280px;
+    height: 85px;
+}
+.header #options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header #options #option {
+    font-size: 1.3em;
+    padding: 10px 15px;
+    background-color: white;
+    color: #121212;
+    border-radius: 3px;
+    cursor: pointer;
+
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+.header #options #option:hover {
+    color: white;
+    background-color: #4b4b4b;
+
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}

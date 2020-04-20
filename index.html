@@ -1,0 +1,97 @@
+﻿<html lang="en">
+    <head>
+        <title>&lt; WebAR &gt; Test</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="icon" href="./assets/Imgs/24_072.ico" />
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./styles/styles.css" />
+        <link rel="stylesheet" href="./styles/header.css" />
+        <link rel="stylesheet" href="./styles/model-viewer.css" />
+        <link rel="stylesheet" href="./styles/button-item.css" />
+
+        <!-- The following libraries and polyfills are recommended to maximize browser support -->
+        <!-- NOTE: you must adjust the paths as appropriate for your project -->
+
+        <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+        <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+        <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+        <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+        <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+        <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
+
+        <!-- 💁 OPTIONAL: Fullscreen polyfill is required for experimental AR features in Canary -->
+        <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+
+        <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+        <!--<script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>-->
+
+        <!-- 🚨 REQUIRED: Base Script -->
+        <script src="./scripts/custom_script.js" defer></script>
+    </head>
+
+    <body>
+        <!-- --------------------------------------------------HEADER-------------------------------------------------- -->
+        <div class="header">
+            <a href="https://www.augmentedislandstudios.com/"
+                ><img
+                    class="logo-container"
+                    src="./assets/Imgs/aiBaseLogo_White.png"
+                    alt="Augmented Island Logo"
+                />
+            </a>
+            <div id="options" onclick="createButtonHandler(true)">
+                <a id="option" href="#">
+                    <span>PRODUCTS</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- -----------------------------------------------------BODY CONTAINER----------------------------------------------------- -->
+        <div id="body-container">
+            <!-- --------------------------------------------------MODEL VIEWER-------------------------------------------------- -->
+
+            <div id="model-container">
+                <div id="default-model" class="hide">
+                    <div class="lds-dual-ring"></div>
+                    <p class="problem-text">
+                        Please connect to the internet and refresh the page
+                    </p>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------MENU ITEMS-------------------------------------------------- -->
+        </div>
+        <div id="model-scripts-container">
+            <!--
+    <script ID="modelModule" type="module" src="https://unpkg.com/@google/model-viewer@v0.8.1/dist/model-viewer.js">
+    </script>
+
+    <!-- Loads <model-viewer> for old browsers like IE11:
+    <script ID="modelNoModule" nomodule src="https://unpkg.com/@google/model-viewer@v0.8.1/dist/model-viewer-legacy.js">
+    </script>
+  -->
+
+            <!-- Loads <model-viewer> for modern browsers: -->
+            <script
+                type="module"
+                src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+            ></script>
+
+            <!-- Loads <model-viewer> for old browsers like IE11: -->
+            <script
+                nomodule
+                src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+            ></script>
+        </div>
+    </body>
+</html>
