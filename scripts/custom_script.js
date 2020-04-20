@@ -27,7 +27,7 @@ const DIRECTORY_DATA = [
         imageUrl: 'shoes',
         size: 'large-text',
         linkUrl: 'Nikeshoes/NikeShoe1.gltf',
-        iosUrl: 'nikeShoes/NikeShoe1.usdz',
+        iosUrl: 'NikeShoes/NikeShoe1.usdz',
     },
     {
         id: 1,
