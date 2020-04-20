@@ -64,18 +64,18 @@ const changeIt = (number) => {
 
     defaultModel.setAttribute('class', 'show');
 
-    const poster = `../assets/Imgs/Posters/${imageUrl}_poster.png`;
-    const src = `../assets/Models/${linkUrl}`;
+    const poster = `./assets/Imgs/Posters/${imageUrl}_poster.png`;
+    const src = `./assets/Models/${linkUrl}`;
     let ios_src = '';
     if (iosUrl) {
-        ios_src = `../assets/Models/${iosUrl}`;
+        ios_src = `./assets/Models/${iosUrl}`;
     } else {
         alert(
             `This model is not available for IOS. Instead, the model for Swimsuit B will be shown in case you are using an IOS device.`
         );
-        ios_src = '../assets/Models/Swimsuits/Swimsuit_B.usdz';
+        ios_src = './assets/Models/Swimsuits/Swimsuit_B.usdz';
     }
-    const alt_comment = `../assets/Models/${title}`;
+    const alt_comment = `./assets/Models/${title}`;
 
     console.log(iosUrl);
 
